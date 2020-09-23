@@ -14,6 +14,11 @@ CartesianPoint::CartesianPoint(int x, int y)
 CartesianPoint::~CartesianPoint()
 = default;
 
+CartesianPoint::CartesianPoint(const CartesianPoint& point_two)
+{
+	SetPoint(point_two.GetX(), point_two.GetY());
+}
+
 //Operator Overloads
 double CartesianPoint::operator-(const CartesianPoint& point_to) const
 {
@@ -30,6 +35,14 @@ double CartesianPoint::operator-(const CartesianPoint& point_to) const
 bool CartesianPoint::operator==(const CartesianPoint& other_point) const
 {
 	return (GetX() == other_point.GetX()) && (GetY() == other_point.GetY());
+}
+
+CartesianPoint CartesianPoint::operator+(const CartesianPoint& point_two) const
+{
+	CartesianPoint tempPoint;
+	tempPoint.SetX(GetX() + point_two.GetX());
+	tempPoint.SetY(GetY() + point_two.GetY());
+	return tempPoint;
 }
 
 

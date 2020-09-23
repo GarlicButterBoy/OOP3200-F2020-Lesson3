@@ -18,10 +18,13 @@ public:
 	//Destructors
 	~CartesianPoint();
 
+	//Copy Constructor
+	CartesianPoint(const CartesianPoint& point_two);
+
 	//Operator Overloads
 	double operator-(const CartesianPoint& point_to) const;
 	bool operator==(const CartesianPoint& point_to) const;
-
+	CartesianPoint operator+(const CartesianPoint& point_two) const;
 
 	// --------------------------------------------------------------------------------
 	/* Accessors: Used to query the state of the object
