@@ -15,6 +15,13 @@ public:
 	*/
 	CartesianPoint(int x = 1, int y = 1);
 
+	//Destructors
+	~CartesianPoint();
+
+	//Operator Overloads
+	double operator-(const CartesianPoint& point_to) const;
+
+
 	// --------------------------------------------------------------------------------
 	/* Accessors: Used to query the state of the object
 	*	- never modifies the object
@@ -22,10 +29,10 @@ public:
 	*/
 
 	// get x
-	int GetX();
+	int GetX() const;
 
 	// get y
-	int GetY();
+	int GetY() const;
 
 	// -------------------------------------------------------------------------------
 	/* Mutator(s): Used to change the state of the object
@@ -44,7 +51,7 @@ public:
 
 
 	// get the distance between this point and a second point
-	double GetDistanceTo(CartesianPoint pointTo) const;
+	double GetDistanceTo(const CartesianPoint& point_to) const;
 
 	// convert the obj to a string
 	std::string ToString() const;
@@ -52,8 +59,8 @@ public:
 
 private:
 	// private data members for the dimensions of the point
-	int myX; // x-axis (horizontal) value
-	int myY;  // y-axis (vertical) value
+	int myX{}; // x-axis (horizontal) value
+	int myY{};  // y-axis (vertical) value
 
 };
 #endif // defined (__CARTESIAN_POINT__)
