@@ -20,6 +20,7 @@ public:
 
 	//Operator Overloads
 	double operator-(const CartesianPoint& point_to) const;
+	bool operator==(const CartesianPoint& point_to) const;
 
 
 	// --------------------------------------------------------------------------------

@@ -27,6 +27,11 @@ double CartesianPoint::operator-(const CartesianPoint& point_to) const
 	return sqrt((xDelta * xDelta) + (yDelta * yDelta));
 }
 
+bool CartesianPoint::operator==(const CartesianPoint& other_point) const
+{
+	return (GetX() == other_point.GetX()) && (GetY() == other_point.GetY());
+}
+
 
 void CartesianPoint::SetPoint(int x, int y)
 {

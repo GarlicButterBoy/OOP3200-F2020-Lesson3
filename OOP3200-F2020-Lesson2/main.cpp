@@ -52,6 +52,8 @@ int main()
 		//distance = origin.GetDistanceTo(destination);
 		distance = origin - destination;
 
+		std::cout << "origin is equal to destination? " << (origin == destination) << std::endl;
+
 		// Output
 		// Show the points and the distance
 		std::cout << std::fixed << std::setprecision(3); // formatting
