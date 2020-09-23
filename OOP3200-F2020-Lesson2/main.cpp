@@ -38,10 +38,10 @@ public:
 
 	// get x
 	int GetX();
-	
+
 	// get y
 	int GetY();
-	
+
 	// -------------------------------------------------------------------------------
 	/* Mutator(s): Used to change the state of the object
 	*	- should contain logic to ensure object remains in a valid state.
@@ -50,10 +50,10 @@ public:
 
 	// set x
 	void SetX(int x);
-	
+
 	// set y,
 	void SetY(int y);
-	
+
 	// set point (both x and y)
 	void SetPoint(int x, int y);
 
@@ -78,13 +78,13 @@ int main()
 	// Declarations
 	// a point called 'origin', initialized to 0, 0
 	CartesianPoint origin = CartesianPoint(0, 0);
-	
+
 	// a point called 'destination'
 	CartesianPoint destination;
 
 	int inputX; // temporary input variable for x
 	int inputY; // temporary input variable for y
-	
+
 	// to store the distance between two points
 	double distance;
 
@@ -109,7 +109,7 @@ int main()
 		// determine the distance between the two points
 		distance = origin.GetDistanceTo(destination);
 
-		// Output 
+		// Output
 		// Show the points and the distance
 		cout << fixed << setprecision(3); // formatting
 		cout << "\nThe Distance between " << origin.ToString()
@@ -188,10 +188,10 @@ string CartesianPoint::ToString() const
 {
 	// declare a stringstream object
 	stringstream strOut;
-	
+
 	// build the string
 	strOut << "(" << myX << ", " << myY << ")";
-	
+
 	// return the string
 	return strOut.str();
 }
