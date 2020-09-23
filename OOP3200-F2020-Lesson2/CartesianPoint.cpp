@@ -6,9 +6,9 @@
 // Class definition section
 
 // constructor for CartesianPoint
-CartesianPoint::CartesianPoint(int x, int y)
+CartesianPoint::CartesianPoint(const int x, const int y): myX(x), myY(y)
 {
-	SetPoint(x, y);
+	//SetPoint(x, y);
 }
 //Destructor
 CartesianPoint::~CartesianPoint()
