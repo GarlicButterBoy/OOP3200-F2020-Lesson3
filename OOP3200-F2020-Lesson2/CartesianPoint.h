@@ -63,8 +63,8 @@ public:
 
 private:
 	// private data members for the dimensions of the point
-	int myX{}; // x-axis (horizontal) value
-	int myY{};  // y-axis (vertical) value
+	int m_x; // x-axis (horizontal) value
+	int m_y;  // y-axis (vertical) value
 
 };
 #endif // defined (__CARTESIAN_POINT__)
